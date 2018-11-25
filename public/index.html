@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <title>Temporary codes - ChooLo</title>
+  </head>
+  <body>
+    <div id="body">
+      <left>
+        <text>Tasks</text>
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+        <card>
+          <titl>Summary information</titl>
+          <div>
+            Fire alarm: 20:59<br />Adress: Espoo, Otakaari 24<br />Complexity: 2
+          </div>
+          <titl>Summary information</titl>
+          <div>
+            water pump: <br />Espoo, Otakaari 23<br />5 fire extinguisher 1st
+            floor<br />2 fire extinguisher 2nd floor
+          </div>
+        </card>
+      </left>
+      <cent> </cent>
+
+      <right>
+        <text>Employees</text> <face> </face><face> </face><face> </face
+        ><face> </face><face> </face
+      ></right>
+
+      <bottom>
+        <topleft>
+          <select>
+            <option>All</option>
+            <option>Bogdanov Mark</option>
+            <option>Bogdanov Mark</option>
+            <option>Bogdanov Mark</option>
+            <option>Bogdanov Mark</option>
+            <option>Bogdanov Mark</option>
+          </select></topleft
+        >
+        <topright> <button>Send</button></topright>
+        <botbot> <textarea placeholder="What happend?"></textarea> </botbot>
+      </bottom>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .hidden {
+        display: none;
+      }
+      ::-webkit-scrollbar {
+        width: 2px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+      }
+      #body {
+        font-family: "Roboto", sans-serif;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+          "l - - r"
+          "l c c r"
+          "l c c r"
+          "l c c r"
+          "l c c r"
+          "l c c r"
+          "l b b r"
+          "l b b r";
+      }
+      left {
+        grid-area: l;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      right {
+        grid-area: r;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      cent {
+        grid-area: c;
+        background: url(/images/cent.png) no-repeat transparent;
+        background-size: contain;
+        background-position: center;
+      }
+      bottom {
+        grid-area: b;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+          "tl tr"
+          "bb bb"
+          "bb bb";
+      }
+      bottom topleft {
+        grid-area: tl;
+        padding: 10px;
+      }
+      topleft select {
+        width: 100%;
+        height: 40px;
+        border-radius: 7px;
+        background: #ebebeb;
+        font-size: 24px;
+        padding: 0 10px;
+        color: #929292;
+      }
+      bottom topright {
+        grid-area: tr;
+        padding: 10px;
+      }
+      topright button {
+        width: 100%;
+        height: 40px;
+        border-radius: 7px;
+        background: #3c92f8;
+        border: none;
+        color: #ffffff;
+        font-size: 24px;
+      }
+      bottom botbot {
+        grid-area: bb;
+        padding: 0 30px 40px 10px;
+      }
+      botbot textarea {
+        height: 100%;
+        width: 100%;
+        font-size: 24px;
+        border: 1px solid #3c92f8;
+        border-radius: 10px;
+        padding: 10px 10px 0;
+      }
+      card {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        margin: 10px 20px;
+        padding: 25px;
+        background: #3c92f8;
+        border-radius: 30px;
+      }
+      card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+      left text,
+      right text {
+        margin: 70px 20px 20px;
+        text-align: center;
+        display: block;
+        font-size: 30px;
+      }
+      left card titl {
+        color: #c4c4c4;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+      left card div {
+        color: #ffffff;
+        font-size: 17px;
+      }
+      right face {
+        background: url(/images/mark.jpg) no-repeat transparent;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        margin: 15px;
+        height: 250px;
+        border-radius: 24px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(() => {
+        // getCodes();
+        // setInterval(getCodes, 5000);
+      });
+      const socket = new WebSocket("ws://10.84.1.85:11001/");
+      socket.onmessage = function(event) {
+        let data = event.data;
+        console.log(data);
+      };
+    </script>
+  </body>
+</html>

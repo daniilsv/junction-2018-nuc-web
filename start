@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+"use strict";
+process.title = "meshit";
+
+const http = require("http");
+
+const port = process.env.PORT || 11001;
+global.connection = null;
+
+function listen() {
+  const app = require("express")();
+  require("./app/web-app")(app);
+  app.set("port", port);
+  let web_server = http.createServer(app);
+  web_server.listen(port);
+
+  web_server.on("listening", function onListening() {
+    console.log("Web listening on port " + port);
+  });
+  new (require("./app/websocket-app"))({
+    httpServer: web_server
+  }).init();
+}
+
+listen();
+const Data = require("./app/data");
+const Reader = require("./app/reader");
+new Data(1).stream().on("data", add);
+new Data(2).stream().on("data", add);
+new Data(3).stream().on("data", add);
+new Data(4).stream().on("data", add);
+new Data(5).stream().on("data", add);
+function add(_) {
+  console.log(_);
+}
